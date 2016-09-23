@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DragulaModule, DragulaService } from 'ng2-dragula/ng2-dragula';
+import { GameService } from './game.service';
+import { Game } from './game';
 
 @Component({
   selector: 'my-app',
@@ -12,7 +14,7 @@ export class AppComponent {
   state = 1;
   public logosid: Array<number>=[1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  constructor() { 
+  constructor(private gameService: GameService) { 
   }
 
   sendGame() {
@@ -21,8 +23,13 @@ export class AppComponent {
     for (var i = 0; this.logosid.length > i; i++) {
       this.log += " "+ this.logosid[i];
     }
+    let game=new Game();
+    game.email=this.email;
+    game.play=this.logosid;
+    console.log('Component will send the request');
+    this.gameService.create(game).then(response => this.receivedResponse(response));
   }
-  receivedResponse() {
+  receivedResponse(response:string) {
      this.state = 3;
   }
   backInBlack() {

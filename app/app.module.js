@@ -8,19 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+require('./rxjs-extensions');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+var http_1 = require('@angular/http');
 var ng2_dragula_1 = require('ng2-dragula/ng2-dragula');
 var app_component_1 = require('./app.component');
+var game_service_1 = require('./game.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, ng2_dragula_1.DragulaModule, forms_1.FormsModule],
+            imports: [platform_browser_1.BrowserModule, ng2_dragula_1.DragulaModule, forms_1.FormsModule, http_1.HttpModule],
             declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            providers: [game_service_1.GameService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
