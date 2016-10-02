@@ -1,0 +1,43 @@
+<h1>L'odyssée vers le C3</h1>
+<div  *ngIf="state == 1">
+  <h2>Classez les logos du plus vieux au plus récent</h2>
+  <p>Clickez sur 2 logos pour les intervertir</p>
+  <br>
+  <div class="game">
+        <logo [id]="0" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="1" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="2" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="3" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="4" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="5" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="6" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="7" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+        <logo [id]="8" [selected]="selected" [logos]="logosid" (onSelect)="onSelect($event)"></logo>
+  </div>
+  <div class="check">
+    <button type="submit" class="btn btn-default checkbtn" (click)="enterEmail()">Testez votre jeu</button>
+  </div>
+</div>
+<div *ngIf="state == 2">
+  <h2>Saisissez votre adresse mail</h2>
+  <div class="email">
+			<input [(ngModel)]="email" placeholder="email" class="form-control">
+  </div>
+  <div class="check">
+    <button type="submit" class="btn btn-default checkbtn" (click)="sendGame()">Envoyez votre réponse</button>
+  </div>
+</div>
+<div *ngIf="state == 3">
+  <h2>Nous vérifions votre réponse ...</h2>
+</div>
+<div *ngIf="state == 5">
+  <h2>Bonne réponse !!!</h2>
+  <p>Votre participation au tirage au sort est enregistrée</p>
+</div>
+<div *ngIf="state == 4">
+  <h2>Mauvaise réponse !!!</h2>
+  <div class="check">
+    <button type="submit" class="btn btn-default checkbtn" (click)="tryAgain()">Rééssayez</button>
+  </div>
+</div>
+<p>Rejoignez nous sur <a href="https://plazza.orange.com/groups/odyc3">Plazza</a></p>

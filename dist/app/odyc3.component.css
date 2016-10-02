@@ -1,0 +1,89 @@
+.game {
+  margin-left: auto;
+  margin-right:auto;
+  width:440px;
+  height:430px;
+  text-align: center;
+  background-color: #F9F9F9;
+  padding-top: 25px;
+}
+.check {
+  margin-left: auto;
+  margin-right:auto;
+  width:440px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.email {
+  margin-left: auto;
+  margin-right:auto;
+  width:440px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.email input {
+
+}
+
+.email span {
+  font-weight: bold;
+}
+
+
+a {
+  color: #eee;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+
+.checkbtn {
+  width:440px;
+  height:80px;
+  background-color: #fbcd00;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+h1 {
+  text-align: center;
+  background-color: #000;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 10px;
+  width:440px;
+  margin-left: auto;
+  margin-right:auto;
+}
+h2 {
+  text-align: center;
+  background-color: #2cb8bf;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 10px;
+  width:440px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+p {
+ text-align: center;
+ padding: 10px;
+ background-color: #bf1d4b;
+ color: white;
+  width:440px;
+  margin-left: auto;
+  margin-right:auto;
+}
