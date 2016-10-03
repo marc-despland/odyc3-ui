@@ -48,8 +48,9 @@ export class Odyc3AppComponent {
     this.state=1;
   }
 
-  receivedResponse(response:string) {
-    if (response === "OK" ) {
+  receivedResponse(response:boolean) {
+    console.log("Received response: "+response);
+    if (response) {
       this.state=5;
     } else {
       this.state=4;
