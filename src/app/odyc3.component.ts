@@ -17,6 +17,7 @@ export class Odyc3AppComponent {
   public selected: number=-1;
   public state:number=1;
   email:string = "";
+  public version:string="1.0.0";
 
   constructor(private gameService: GameService) {
   }
